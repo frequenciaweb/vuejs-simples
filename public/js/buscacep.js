@@ -7,7 +7,8 @@ Vue.component('componente-teste', {
       },
     methods: {
 
-        criarSaida(identificador,valor){
+        criarSaida(identificador,valor){         
+
           var html = `
           <div class="row">
             <div class='form-group'>
@@ -24,6 +25,7 @@ Vue.component('componente-teste', {
           
         },
         buscarCEP(){
+          document.getElementById("resposta").innerHTML = "";
           var url = `https://viacep.com.br/ws/${this.cep}/json/`;
 
           this.cep =  this.cep.replace(/\D/g, "");
